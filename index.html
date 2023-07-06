@@ -25,6 +25,21 @@
           <li class="navigation-li"><a href="" class="navigation-link link">Contacts</a></li>
         </ul>
       </nav>
+      <button class="header-modal-button js-open-menu"
+      aria-expanded="false"
+          aria-controls="mobile-menu">
+        <svg class="header-modal-button-svg" width="32" height="22" xmlns="http://www.w3.org/2000/svg" width="32" height="22" viewBox="0 0 32 22" fill="none">
+            <g clip-path="url(#clip0_297053_2156)">
+              <path d="M1.34766 20.0431H30.8861M1.34766 10.7354H30.8861M1.34766 1.42773H30.8861" stroke="#2E2F42" stroke-width="3"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+            <defs>
+              <clipPath id="clip0_297053_2156">
+                <rect width="32" height="22" />
+              </clipPath>
+            </defs>
+        </svg>
+      </button>
       <address class="address">
         <ul class="address-list list">
           <li><a href="mailto:info@devstudio.com" class="address-link link">info@devstudio.com</a></li>
@@ -34,7 +49,7 @@
     </div>
   </header>
   <main>
-    <section class="hero">
+    <!-- <section class="hero">
       <div class="container">
         <h1 class="hero-title">Effective Solutions <br /> for Your Business</h1>
         <button class="button-order" type="button" data-modal-open>Order Service</button>
@@ -326,11 +341,11 @@
 
 </div>
 
-    </section>
+    </section> -->
   </main>
 
   <footer class="footer">
-    <div class="container footer-elements">
+    <!-- <div class="container footer-elements">
       <div class="footer-logo-text">
         <a href="./index.html" class="logo link logo-footer">Web<span class="web-footer">Studio</span></a>
       <p class="footer-text">Increase the flow of customers and sales for your business with digital marketing & growth
@@ -382,10 +397,56 @@
         </button>
       </form>
      </div>
-    </div>
+    </div> -->
   </footer>
 
-
+<div class="header-modal js-menu-container">
+  <div class="container header-modal-container">
+  <button type="button" class="modal-close-btn  js-close-menu" id="mobile-menu">
+    <svg class="modal-close-btn-icon" width="8" height="8">
+      <use href="./images/icons.svg#icon-close-black"></use>
+    </svg>
+  </button>
+  <ul class="header-modal-list list">
+    <li class="header-modal-item"><a href="./index.html" class="header-modal-link  link">Studio</a></li>
+    <li class="header-modal-item"><a href="./portfolio.html" class="header-modal-link link">Portfolio</a></li>
+    <li class="header-modal-item"><a href="" class="header-modal-link link">Contacts</a></li>
+  </ul>
+  <ul class="header-modal-address-list list">
+    <li class="header-modal-address-item"><a href="tel:+110001111111" class="header-modal-address-tell link">+11 (000) 111-11-11</a></li>
+    <li class="header-modal-address-item"><a href="mailto:info@devstudio.com" class="header-modal-address-mail link">info@devstudio.com</a></li>
+  </ul>
+  <ul class="icon list">
+    <li class="icon-li">
+      <a href="" class="icon-link link ">
+        <svg class="icon-svg" width="16" height="16">
+          <use href="./images/icons.svg#icon-instagram"></use>
+        </svg>
+      </a>
+    </li>
+    <li class="icon-li">
+      <a href="" class="icon-link link">
+        <svg class="icon-svg" width="16" height="16">
+          <use href="./images/icons.svg#icon-twitter"></use>
+        </svg>
+      </a>
+    </li>
+    <li class="icon-li">
+      <a href="" class="icon-link  link">
+        <svg class="icon-svg" width="16" height="16">
+          <use href="./images/icons.svg#icon-facebook"></use>
+        </svg>
+      </a>
+    </li>
+    <li class="icon-li">
+      <a href="" class="icon-link link">
+        <svg class="icon-svg" width="16" height="16">
+          <use href="./images/icons.svg#icon-linkedin"></use>
+        </svg>
+      </a>
+    </li>
+  </ul>
+</div>
 <div class="backdrop  is-hidden" data-modal>
   <div class="modal">
     <button type="button" class="modal-close-btn" data-modal-close>
@@ -442,7 +503,7 @@
       </form>
   </div>
 </div>
-
+<script defer src="js/mobile-menu.js"></script>
 <script src="./js/modal.js"></script>
 </body>
 
