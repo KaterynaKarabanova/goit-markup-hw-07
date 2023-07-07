@@ -326,18 +326,48 @@ button {
     display: block;
     margin: 0 auto;
 
-    background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/people-office.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/hero/Dark-bg-mob.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 
 }
+@media screen and (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/hero/Dark-bg-mob@2x.jpg);
+        }
+}
+
 
 
 @media screen and (min-width:768px) {
 .hero{
     max-width: 768px;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/hero/Dark-bg-tab@1x.jpg);
 }
+}
+@media screen and (min-width:768px) and (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+   .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/hero/Dark-bg-tab@2x.jpg);
+   }
+}
+
+@media screen and (min-width:1158px) {
+    .hero {
+        max-width: 768px;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/hero/Dark-bg-desk.jpg);
+    }
+}
+@media screen and (min-width:1158px) and (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/hero/Dark-bg-desk@2x.jpg);
+    }
 }
 
 @media screen and (min-width:1158px) {
@@ -415,9 +445,6 @@ button {
         font-weight: 500;
         font-size: 20px;
     }
-     .paragraph-text {
-    font-weight: 500;
-    }
    .studio-icon {
       background-color: var(--background-cloud);
       width: 264px;
@@ -450,6 +477,11 @@ button {
     color: var(--text-slate);
     line-height: 1.5;
 
+}
+@media screen and (min-width:1157px){
+    .paragraph-text{
+        font-weight: 400;
+    }
 }
 @media screen and (max-width:767px) {
 .studio-list {
