@@ -115,10 +115,11 @@ body {
     padding-top: 80px;
     padding-left: 40px;
 }
-.header-modal-container{
+.header-modal-list-container{
     display: flex;
     flex-direction: column;
-   
+    width: 100vw;
+    height: 80vh;
 }
 .header-modal-list{
     display: flex;
@@ -132,10 +133,10 @@ body {
         flex-direction: column;
         flex-wrap: wrap;
         gap: 40px;
-        margin: 0;
-        padding: 0;
+        margin-bottom: 48px; 
+
 }
-.header-modal-link, .header-modal-address-tell{
+.header-modal-link {
 color: var(--background-navy);
 font-family: Roboto;
 font-size: 36px;
@@ -146,8 +147,29 @@ letter-spacing: 0.72px;
 text-transform: capitalize;
 transition: color var(--transition-duration-250) var(--transition-timing-function);
 }
-.header-modal-address-tell{
-    font-size: 30px;
+.header-modal-address-tell {
+    color: var(--background-navy);
+        font-family: Roboto;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.1;
+        letter-spacing: 0.72px;
+        text-transform: capitalize;
+        transition: color var(--transition-duration-250) var(--transition-timing-function);
+
+}
+
+@media screen and (min-width: 340px) {
+.header-modal-address-tell {
+        font-size: 30px;
+    }
+}
+.header-modal-icon{
+    display: flex;
+     max-width: 264px;
+    justify-content: start;
+     gap: 24px;
 }
 .header-modal-link:hover,
 .header-modal-link:focus{
@@ -177,6 +199,7 @@ transition: color var(--transition-duration-250) var(--transition-timing-functio
     display: none;
 }
 }
+
 .page-header{
     padding-top: 25.5px;
     padding-bottom: 23.5px;
@@ -251,7 +274,7 @@ transition: color var(--transition-duration-250) var(--transition-timing-functio
     content: "";
     position: absolute;
     left: 0;
-    bottom: -4px;
+    bottom: -10px;
     width: 100%;
     height: 4px;
     background-color: var(--button-blue-active-ocean);
@@ -264,9 +287,15 @@ transition: color var(--transition-duration-250) var(--transition-timing-functio
 .navigation-list li:last-child {
     margin-right: 0;
 }
+
 .address-link {
     color: var(--text-slate);
     text-decoration: none;
+    font-family: Roboto;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 0.48px;
     line-height: 1.5;
     transition: color var(--transition-duration-250) var(--transition-timing-function);
 }
@@ -289,6 +318,9 @@ transition: color var(--transition-duration-250) var(--transition-timing-functio
     }
     .address-list li:not(:last-child) {
             margin-right: 40px;
+        }
+        .nav-active::after{
+        bottom: -4px;
         }
 }
 
@@ -506,12 +538,12 @@ button {
 .studio{
     display: flex;
     justify-content: space-between;
-    gap: 24px;
 }
 }
 @media screen and (min-width:1158px) {
    .studio{
     width: 1128px;
+    gap: 24px;
 } 
 .studio:last-child {
     margin-right: 0;
@@ -626,6 +658,13 @@ button {
     justify-content: center;
     gap: 24px;
 }
+.header-modal-icon{
+    display: flex;
+        max-width: 264px;
+        justify-content: left;
+        gap: 24px;
+}
+
 .icon-link {
     width: 40px;
     height: 40px;
@@ -665,6 +704,11 @@ button {
         padding: 120px 0;
     }
 }
+.customer-list-wrapper{
+    width: 100%;
+    height: 100%;
+    padding: ;
+}
 .customer-list {
     display: flex;
     justify-content: center;
@@ -677,8 +721,13 @@ button {
     .customer-list {
         column-gap: 24px;
         max-width: 576px;
-        margin: 0 auto;
+       
     }
+     .container-customer{
+        width: 100%;
+        padding-left: calc((100% - 576px)/2);
+        padding-right: calc((100% - 576px)/2);
+    } 
 }
 @media screen and (min-width:1158px){
     .customer-list {
@@ -786,6 +835,7 @@ button {
         }
 .footer-elements {
     margin: 0 auto;
+    padding: 0;
     max-width: 552px;
 }
 }

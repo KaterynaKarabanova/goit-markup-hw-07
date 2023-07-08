@@ -28,6 +28,11 @@
                 </ul>
                 
             </nav>
+            <button class="header-modal-button js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="header-modal-button-svg" width="32" height="22">
+                    <use href="./images/icons.svg#icon-menu"></use>
+                </svg>
+            </button>
             <address class="address">
                 <ul class="address-list list">
                     <li><a href="mailto:info@devstudio.com" class="address-link link">info@devstudio.com</a></li>
@@ -225,6 +230,61 @@
         </div>
     </div>
 </footer>
+<div class="header-modal js-menu-container">
+    <div class="container header-modal-container">
+        <button type="button" class="modal-close-btn  js-close-menu" id="mobile-menu">
+            <svg class="modal-close-btn-icon" width="8" height="8">
+                <use href="./images/icons.svg#icon-close-black"></use>
+            </svg>
+        </button>
+        <div class="header-modal-list-container">
+            <ul class="header-modal-list list">
+                <li class="header-modal-item"><a href="./index.html" class="header-modal-link  link">Studio</a></li>
+                <li class="header-modal-item"><a href="./portfolio.html" class="header-modal-link link">Portfolio</a>
+                </li>
+                <li class="header-modal-item"><a href="" class="header-modal-link link">Contacts</a></li>
+            </ul>
+            <ul class="header-modal-address-list list">
+                <li class="header-modal-address-item"><a href="tel:+110001111111"
+                        class="header-modal-address-tell link">+11 (000) 111-11-11</a></li>
+                <li class="header-modal-address-item"><a href="mailto:info@devstudio.com"
+                        class="header-modal-address-mail link">info@devstudio.com</a></li>
+            </ul>
+            <ul class="icon list header-modal-icon">
+                <li class="icon-li">
+                    <a href="" class="icon-link link ">
+                        <svg class="icon-svg" width="16" height="16">
+                            <use href="./images/icons.svg#icon-instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="icon-li">
+                    <a href="" class="icon-link link">
+                        <svg class="icon-svg" width="16" height="16">
+                            <use href="./images/icons.svg#icon-twitter"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="icon-li">
+                    <a href="" class="icon-link  link">
+                        <svg class="icon-svg" width="16" height="16">
+                            <use href="./images/icons.svg#icon-facebook"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="icon-li">
+                    <a href="" class="icon-link link">
+                        <svg class="icon-svg" width="16" height="16">
+                            <use href="./images/icons.svg#icon-linkedin"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+<script defer src="js/mobile-menu.js"></script>
 </body>
 
 </html>
