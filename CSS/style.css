@@ -80,11 +80,7 @@ body {
         width: 1157px;
     }
 }
-.header-modal-container {
-    position: relative;
-    padding-top: 80px;
-    padding-left: 40px;
-}
+
 .header-modal-button{
     width: 32px;
     height: 22px;
@@ -109,23 +105,35 @@ body {
     left: 0;
     background-color: var(--base-white);
     z-index: 1000;
-
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
     transition: opacity var(--transition-duration-250) var(--transition-timing-function), visibility var(--transition-duration-250) var(--transition-timing-function);
 }
-.header-modal-item:not(:last-child){
-    margin-bottom: 40px;
+.header-modal-container {
+    position: relative;
+    padding-top: 80px;
+    padding-left: 40px;
 }
-
 .header-modal-container{
     display: flex;
-    flex-direction:column;
-
+    flex-direction: column;
+   
 }
 .header-modal-list{
-    margin-bottom: 284px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: auto;
+}
+.header-modal-address-list{
+    display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 40px;
+        margin: 0;
+        padding: 0;
 }
 .header-modal-link, .header-modal-address-tell{
 color: var(--background-navy);
@@ -155,12 +163,7 @@ transition: color var(--transition-duration-250) var(--transition-timing-functio
         letter-spacing: 0.4px;
         color: var(--text-slate);
 }
-.header-modal-address-item:not(:last-child) {
- margin-bottom: 40px;
-}
-.header-modal-address-item:last-child{
-    margin-bottom: 48px;
-}
+
 .header-modal.is-open {
     opacity: 1;
     visibility: visible;
@@ -325,56 +328,52 @@ button {
     max-height: 432px;
     display: block;
     margin: 0 auto;
-
-    background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/hero/Dark-bg-mob.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)),  url(../images/hero/Dark-bg-mob.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 
 }
-@media screen and (min-device-pixel-ratio: 2),
+@media screen and  (min-device-pixel-ratio: 2),
 (min-resolution: 192dpi),
 (min-resolution: 2dppx) {
     .hero {
-            background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/hero/Dark-bg-mob@2x.jpg);
-        }
+    background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/hero/Dark-bg-mob@2x.jpg);
+    }
 }
 
-
-
+@media screen and (min-width:428px){
+    .hero {
+        max-width: 767px;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/hero/Dark-bg-tab@1x.jpg);
+    }
+}
+@media  screen and (min-width:428px) and (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/hero/Dark-bg-tab@2x.jpg);
+    }
+}
 @media screen and (min-width:768px) {
-.hero{
-    max-width: 768px;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/hero/Dark-bg-tab@1x.jpg);
-}
-}
-@media screen and (min-width:768px) and (min-device-pixel-ratio: 2),
-(min-resolution: 192dpi),
-(min-resolution: 2dppx) {
-   .hero {
-    background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/hero/Dark-bg-tab@2x.jpg);
-   }
-}
-
-@media screen and (min-width:1158px) {
     .hero {
-        max-width: 768px;
+        max-width:1440px;
         background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/hero/Dark-bg-desk.jpg);
     }
 }
-@media screen and (min-width:1158px) and (min-device-pixel-ratio: 2),
+@media screen and (min-width:768px) and (min-device-pixel-ratio: 2),
 (min-resolution: 192dpi),
 (min-resolution: 2dppx) {
     .hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/hero/Dark-bg-desk@2x.jpg);
     }
 }
-
 @media screen and (min-width:1158px) {
 .hero {
-        max-width: 1440px;
+       
         max-height: 600px;
         padding: 188px 0 ;
+        
     }
 }
 .button-order {
@@ -486,9 +485,11 @@ button {
 @media screen and (max-width:767px) {
 .studio-list {
         width: 100%;
-        margin-bottom: 72px;
 
     }
+.studio-list:not(:last-child){
+    margin-bottom: 72px;
+}
 }
 @media screen and (min-width:768px) and (max-width:1157px){
     .studio {
@@ -868,6 +869,11 @@ button {
     line-height: 1.5;
     letter-spacing: 0.04em;
 }
+@media screen and (max-width:767px){
+    .footer-form-input{
+    width:calc(100vw - 30px);
+    }
+}
 
 .footer-form-input:focus {
     outline: none;
@@ -955,6 +961,11 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-b
     background-color: var(--dairy, #FCFCFC);
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
     transition: transform var(--transition-duration-250) var(--transition-timing-function);
+}
+@media screen and (max-width:420px){
+    .modal{
+        width: 320px;
+    }
 }
 @media screen and (min-width:1158px) {
     .modal {
